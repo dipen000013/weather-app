@@ -1,0 +1,19 @@
+@mixin vcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin vspace {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin  vstart {
+  display: flex;
+  align-items: center;
+}
+@mixin bgImg {
+  background-repeat: no-repeat;
+  background-size: cover;
+}

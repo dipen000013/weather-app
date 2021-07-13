@@ -1,0 +1,285 @@
+@import "../config/mixins";
+@import "../config/variables";
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+// Resetting Global Tags Margin
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+// Global Classes
+.bg-rainy {
+  background-image: url("../images/rain.jpg");
+  @include bgImg;
+}
+
+.bg-night {
+  background-image: url("../images/night.jpg");
+  @include bgImg;
+}
+
+.bg-overcast {
+  background-image: url("../images/overcast.jpg");
+  @include bgImg;
+}
+
+.bg-rain {
+  background-image: url("../images/rain.jpg");
+  @include bgImg;
+}
+.bg-snow {
+  background-image: url("../images/snow.jpg");
+  @include bgImg;
+}
+.bg-sunny {
+  background-image: url("../images/sunny.jpg");
+  @include bgImg;
+}
+
+.bg-thunder {
+  background-image: url("../images/thunder.jpg");
+  @include bgImg;
+}
+
+// Basic Styling
+.app {
+  min-height: 100vh;
+  padding: 40px 0;
+  @include vcenter;
+}
+
+.card {
+  border: 0;
+  background-color: rgb(255 255 255 / 45%);
+  backdrop-filter: blur(5px);
+}
+.weather-info-card {
+  position: relative;
+  padding: 30px;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+  .dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    @include media-breakpoint-down(md) {
+      top: 20px;
+      right: 20px;
+    }
+    .btn {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: $white;
+      border: 0;
+      transition: transform 0.5s, filter 1.3s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+      }
+      @include media-breakpoint-down(xxl) {
+        width: 50px;
+        height: 50px;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 50px;
+        height: 50px;
+      }
+      &:focus {
+        box-shadow: none;
+        outline: none;
+        border: 0;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .dropdown-menu {
+      padding: 15px;
+      border-radius: 20px;
+      border: 0;
+      background-color: transparentize(#ececec, 0.2);
+      backdrop-filter: blur(5px);
+      font-size: 18px;
+      @include box-shadow($box-shadow-sm);
+    }
+    .dropdown-item {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 15px;
+      outline: 0;
+      color: $dark;
+      cursor: pointer;
+      @include vstart;
+      &:focus {
+        color: $dark;
+        outline: none;
+      }
+      &:hover {
+        background-color: transparentize(#fff, 0.5);
+        backdrop-filter: blur(5px);
+      }
+      img {
+        width: 30px;
+        margin-right: 10px;
+      }
+    }
+    .dropdown-menu-right {
+      min-width: 200px;
+      top: -70px !important;
+      @include media-breakpoint-down(xxl) {
+        top: -50px !important;
+      }
+    }
+  }
+  .card-body {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(md) {
+      display: block;
+    }
+    .icon {
+      width: 40%;
+      margin-right: 30px;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .weather {
+        width: 400px;
+        @include media-breakpoint-down(xxl) {
+          width: 300px;
+        }
+        @include media-breakpoint-down(md) {
+          width: 180px;
+          margin: 0 auto;
+        }
+      }
+    }
+    .info {
+      width: 60%;
+      font-size: 50px;
+      font-weight: $font-weight-bold;
+      @include media-breakpoint-down(lg) {
+        font-size: 40px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 30px;
+      }
+      .degree {
+        font-weight: $font-weight-bold;
+        font-size: 350%;
+        line-height: 1;
+        @include media-breakpoint-down(xxl) {
+          font-size: 280%;
+        }
+        @include media-breakpoint-down(xl) {
+          font-size: 180%;
+          line-height: 1.3;
+        }
+        @include media-breakpoint-down(md) {
+          font-size: 200%;
+          line-height: 1.4;
+        }
+        @include media-breakpoint-down(sm) {
+          font-size: 150%;
+        }
+      }
+      .status {
+        font-weight: 500;
+        font-size: 30px;
+        @include media-breakpoint-down(sm) {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}
+.weather-info-card-mini {
+  cursor: pointer;
+  transition: transform 0.5s, filter 1.5s ease-in-out;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  .card-body {
+    display: flex;
+    align-items: center;
+    padding: 24px 15px;
+    @include media-breakpoint-down(lg) {
+      display: block;
+      padding: 20px;
+      text-align: center;
+    }
+    .icon {
+      margin-right: 30px;
+      @include media-breakpoint-down(xl) {
+        margin-right: 15px;
+      }
+      @include media-breakpoint-down(lg) {
+        margin-right: 0;
+      }
+      .weather {
+        width: 80px;
+        @include media-breakpoint-down(xl) {
+          width: 70px;
+        }
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .info {
+      font-size: 20px;
+      font-weight: bold;
+      .degree {
+        font-size: 35px;
+        font-weight: $font-weight-bold;
+        line-height: 1.3;
+        @include media-breakpoint-down(xxl) {
+          font-size: 28px;
+        }
+        @include media-breakpoint-down(xl) {
+          font-size: 25px;
+          margin-top: 10px;
+        }
+        @include media-breakpoint-down(ms) {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}
+
+@import "searchCity";

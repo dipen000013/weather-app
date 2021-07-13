@@ -1,0 +1,27 @@
+// Global variables
+$enable-shadows: true;
+
+// Containers
+$grid-breakpoints: (
+        xs: 0,
+        ms: 375px,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+);
+
+$container-max-widths: (
+        ms: 95%,
+        sm: 95%,
+        md: 95%,
+        lg: 95%,
+        xl: 1170px,
+        xxl: 1360px
+);
+
+// Border radius
+$border-radius: 40px;
+
+

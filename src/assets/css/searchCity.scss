@@ -1,0 +1,119 @@
+.search-city-text {
+  font-size: 30px;
+  color: transparentize($white, 0.2);
+  cursor: pointer;
+  margin-bottom: 35px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 8px 25px;
+  @include media-breakpoint-down(sm) {
+    font-size: 24px;
+  }
+}
+.search-city-input {
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 9999;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+
+  .css-2b097c-container {
+    min-height: 80px;
+    background-color: rgb(255 255 255 / 45%);
+    backdrop-filter: blur(5px);
+    font-size: 26px;
+    padding: 0 150px 0 30px;
+    color: $dark;
+    border: 0;
+    outline: 0;
+    border-radius: 50px;
+    @include media-breakpoint-down(xxl) {
+      min-height: 60px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 20px;
+    }
+    &:focus {
+      border: 0;
+      outline: 0;
+      box-shadow: none;
+    }
+    .css-yk16xz-control {
+      background: transparent;
+      border: none !important;
+      box-shadow: none !important;
+      // min-height: auto;
+      min-height: 80px;
+      // padding-top: 5px;
+      @include media-breakpoint-down(xxl) {
+        min-height: 60px;
+      }
+    }
+    .css-1pahdxg-control {
+      box-shadow: none !important;
+    }
+  }
+  .css-1pahdxg-control {
+    background: transparent;
+    border: none !important;
+    box-shadow: none !important;
+    min-height: 80px;
+    @include media-breakpoint-down(xxl) {
+      min-height: 60px;
+    }
+  }
+  .css-1hb7zxy-IndicatorsContainer {
+    display: none;
+  }
+  .css-26l3qy-menu {
+    width: 93%;
+  }
+  .css-4ljt47-MenuList{
+    font-size: 16px;
+  }
+  .info {
+    color: #a0a0a0;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    z-index: 1;
+    font-size: 18px;
+    font-weight: 500;
+    @include media-breakpoint-down(xxl) {
+      font-size: 16px;
+      top: 18px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 14px;
+    }
+    span {
+      border: $border-width solid #a0a0a0;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin-right: 5px;
+    }
+  }
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes animatebottom {
+  from {
+    bottom: -50px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}

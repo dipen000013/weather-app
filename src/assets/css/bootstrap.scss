@@ -1,0 +1,6 @@
+// Overriding default bootstrap
+@import "../config/variables";
+@import "../config/mixins";
+
+// Importing default bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,50 @@
+// Mixins
+@mixin image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin vcenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin vstart {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@mixin vend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+// Global Variables
+.app-loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999999;
+  text-align: center;
+
+  .MuiCircularProgress-indeterminate {
+    animation: none !important;
+  }
+
+  .MuiCircularProgress-svg {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 50px;
+    width: 50px;
+  }
+}
