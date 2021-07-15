@@ -75,3 +75,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 Used open weather API for getting weather for selected city. Please check here for more details: [https://openweathermap.org/]
 
 Used AccuWeather for auto complete city list. Please check here for more details: [https://developer.accuweather.com/apis]. Using of this API we have only do 50 request per day as free. For access or used more request need to subscribe or get the plan. Also, this API not working in local sometimes due to CROS origin issue. For now I have added some proxy URL for used this one.
+
+To enable cros temporary check and used below link [http://cors-anywhere.herokuapp.com/corsdemo] 
